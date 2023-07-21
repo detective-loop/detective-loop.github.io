@@ -1220,7 +1220,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #0fc220;
+  background: #f1263c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1329,7 +1329,7 @@ pre .javascript .function {
   bottom: 45px;
   cursor: pointer;
   height: 14px;
-  left: 30px;
+  left: $b2t-position-right;
   padding: 5px;
   position: fixed;
   width: 14px;
@@ -1337,8 +1337,8 @@ pre .javascript .function {
 }
 @media (max-width: 991px) {
   .sidebar-toggle {
-    left: 20px;
-    opacity: 0.8;
+    left: $b2t-position-right-mobile;
+    opacity: 0.99;
     display: none;
   }
 }
@@ -1540,8 +1540,8 @@ pre .javascript .function {
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  left: 30px;
-  opacity: 0.6;
+  left: $b2t-position-right;
+  opacity: 0.94;
   padding: 0 6px;
   position: fixed;
   transition-property: bottom;
@@ -1555,12 +1555,14 @@ pre .javascript .function {
   color: #fc6423;
 }
 .back-to-top.back-to-top-on {
-  bottom: 30px;
+  bottom: 19px;
 }
 @media (max-width: 991px) {
   .back-to-top {
-    left: 20px;
-    opacity: 0.8;
+    left: $b2t-position-right-mobile;
+    opacity: 0.99;
+    padding-right: 5px;
+    left: 30px;
   }
 }
 .post-body {
@@ -2366,11 +2368,11 @@ ul.breadcrumb li + li:last-child {
 }
 .back-to-top {
   left: auto;
-  right: 30px;
+  right: $b2t-position-right;
 }
 @media (max-width: 991px) {
   .back-to-top {
-    right: 20px;
+    right: $b2t-position-right-mobile;
   }
 }
 @media (max-width: 991px) {
