@@ -9,6 +9,8 @@
 <p>（3）序列相乘：x1（n）&#x3D;3e^-0.25n (-4&lt;n&lt;10),x2(n)&#x3D;u(n+1)(-2&lt;n&lt;6),求x（n）&#x3D;x1（n）x2（n）；</p>
 <p>（4）序列反折：x（n）&#x3D;u（n-1）（-4&lt;n&lt;4），求x（-n）；</p>
 <p>（5）序列的尺度变换x（n）&#x3D;cos（2pi*n）求x（3n）和x（n&#x2F;3）；</p>
+<span id="more"></span>      
+
 <pre><code>%问题一
 n1=-5;n2=5;k0=0;k1=-3;k2=3;       
 n=n1:n2;                           %生成离散信号的时间序列
