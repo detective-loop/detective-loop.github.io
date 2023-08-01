@@ -79,7 +79,7 @@ axis([0,2,min(x),max(x)]);
 subplot(5,3,14),stem(tn,x2,&#39;filled&#39;,&#39;g&#39;); ylabel(&#39;x(n/3)&#39;);
 axis([0,2,min(x),max(x)]); 
 </code></pre>
-<p><a href="https://pic1.zhimg.com/80/v2-32c635ccff58c090d70552ad67c313ee_720w.webp?source=1940ef5c" title="上述问题的仿真结果"><img data-src="C:\Users\DELL\Pictures" alt="上述问题的仿真结果" title="上述问题的仿真结果"></a></p>
+<p><a href="https://pic1.zhimg.com/80/v2-32c635ccff58c090d70552ad67c313ee_720w.webp?source=1940ef5c" title="上述问题的仿真结果"><img data-src="C:\Users\DELL\Pictures" alt="上述问题的仿真结果" title="上述问题的仿真结果"></a><br>![图片alt](<a href="https://pic1.zhimg.com/80/v2-32c635ccff58c090d70552ad67c313ee_720w.webp?source=1940ef5c">https://pic1.zhimg.com/80/v2-32c635ccff58c090d70552ad67c313ee_720w.webp?source=1940ef5c</a> “上述问题的仿真结果”）</p>
 ]]></content>
   </entry>
   <entry>
