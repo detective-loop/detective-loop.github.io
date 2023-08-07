@@ -132,7 +132,8 @@ axis([0,2,min(x),max(x)]);
 <li>《家庭、私有制和国家的起源》—-是“马恩”的国家学说，马克思主义国家学说的代表作之一。</li>
 <li>《国家与革命》—-是“列宁”的国家学说，<strong>要与马恩的国家学说区分开。</strong></li>
 <li>《帝国主义是资本主义的最高阶段》—-是《资本论》的直接继续，指出<strong>帝国主义是无产阶级革命的前夜。</strong>（帝国主义是垄断资本主义的别称）</li>
-<li>《论欧洲联邦口号》—-<strong>首次明确提出“一国胜利论”。</strong><br> -《无产阶级革命的军事纲领》—-进一步发挥了“一国胜利论”</li>
+<li>《论欧洲联邦口号》—-<strong>首次明确提出“一国胜利论”。</strong></li>
+<li>《无产阶级革命的军事纲领》—-进一步发挥了“一国胜利论”</li>
 </ul>
 </li>
 <li>马克思主义的鲜明特征——<strong>科学性与革命性的统一</strong><ol>
@@ -274,12 +275,6 @@ axis([0,2,min(x),max(x)]);
 ]]></content>
   </entry>
   <entry>
-    <title>日常词汇积累</title>
-    <url>/2023/07/23/%E8%8B%B1%E8%AF%AD%E7%A7%AF%E7%B4%AF/</url>
-    <content><![CDATA[<h1 id="04年英一词汇记录"><a href="#04年英一词汇记录" class="headerlink" title="04年英一词汇记录"></a>04年英一词汇记录</h1><p><em>juvenile</em>	&emsp;青少年<br><em>delinquency</em>	&emsp;犯罪<br><em>latter</em>	&emsp;后者<br><em>tentative</em>	&emsp;试探性的，初步的<span id="more"></span><br><em>neglect</em>	&emsp;忽视<br><em>not yet</em>	&emsp;还没有<br><em>commit</em>	&emsp;犯，触犯，承认<br><em>commenting</em>	&emsp;评论<br><em>consultation</em>  &emsp;咨询<br><em>incredible</em>    &emsp;不可思议的<br><em>incidence</em>     &emsp;发生率</p>
-]]></content>
-  </entry>
-  <entry>
     <title>极限的几种求法</title>
     <url>/2023/08/05/%E6%B1%82%E6%9E%81%E9%99%90%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h1 id="极限的几种求法"><a href="#极限的几种求法" class="headerlink" title="极限的几种求法"></a>极限的几种求法</h1><ol>
@@ -315,6 +310,12 @@ axis([0,2,min(x),max(x)]);
 <li>裂项相消法求极限</li>
 <li>利用函数极限求数列极限（最常见的是（1^无穷）的转化）</li>
 </ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>日常词汇积累</title>
+    <url>/2023/07/23/%E8%8B%B1%E8%AF%AD%E7%A7%AF%E7%B4%AF/</url>
+    <content><![CDATA[<h1 id="04年英一词汇记录"><a href="#04年英一词汇记录" class="headerlink" title="04年英一词汇记录"></a>04年英一词汇记录</h1><p><em>juvenile</em>	&emsp;青少年<br><em>delinquency</em>	&emsp;犯罪<br><em>latter</em>	&emsp;后者<br><em>tentative</em>	&emsp;试探性的，初步的<span id="more"></span><br><em>neglect</em>	&emsp;忽视<br><em>not yet</em>	&emsp;还没有<br><em>commit</em>	&emsp;犯，触犯，承认<br><em>commenting</em>	&emsp;评论<br><em>consultation</em>  &emsp;咨询<br><em>incredible</em>    &emsp;不可思议的<br><em>incidence</em>     &emsp;发生率</p>
 ]]></content>
   </entry>
 </search>
