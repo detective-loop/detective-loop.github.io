@@ -1,128 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>matlab怎么表示一个离散序列的时移？</title>
-    <url>/2023/07/18/matlab%E7%94%BB%E7%A6%BB%E6%95%A3%E5%BA%8F%E5%88%97%E5%9B%BE%E5%83%8F/</url>
-    <content><![CDATA[<p>下面用几个例子解释一下：</p>
-<p>（1）序列的移位：y（n）&#x3D;u（n）；y1（n）&#x3D;u（n+3）；y2（n）&#x3D;u（n-3）（-5&lt;n&lt;5）；</p>
-<p>（2）序列的相加：x1（n）&#x3D;u(n-2)（-1&lt;n&lt;6），x2（n）&#x3D;u(n-1),求x(n)&#x3D;x1(n)+x2(n)；</p>
-<p>（3）序列相乘：x1（n）&#x3D;3e^-0.25n (-4&lt;n&lt;10),x2(n)&#x3D;u(n+1)(-2&lt;n&lt;6),求x（n）&#x3D;x1（n）x2（n）；</p>
-<p>（4）序列反折：x（n）&#x3D;u（n-1）（-4&lt;n&lt;4），求x（-n）；</p>
-<p>（5）序列的尺度变换x（n）&#x3D;cos（2pi*n）求x（3n）和x（n&#x2F;3）；</p>
-<span id="more"></span>      
-
-<pre><code>%问题一
-n1=-5;n2=5;k0=0;k1=-3;k2=3;       
-n=n1:n2;                           %生成离散信号的时间序列
-y=[n&gt;=k0];                        %生成离散信号y(n)
-y1=[(n-k1)&gt;=0];                    %生成离散信号y1(n)
-y2=[(n-k2)&gt;=0];                    %生成离散信号y2(n)
-subplot(5,3,1),stem(n, y,&#39;filled&#39;,&#39;k&#39;); ylabel(&#39;u(n)&#39;);
-subplot(5,3,2),stem(n, y1,&#39;filled&#39;,&#39;g&#39;);ylabel(&#39;u(n+3)&#39;);
-subplot(5,3,3),stem(n, y2,&#39;filled&#39;,&#39;g&#39;); ylabel(&#39;u(n-3)&#39;);
-%问题二
-n1=-1:6;n01=2;               
-x1=[(n1-n01)&gt;=0];             %建立x1信号
-n2=-3:8;n02=1;
-x2=[(n2-n02)&gt;=0];             %建立x2信号
-n=min([n1,n2]):max([n1,n2]);  %为x信号建立时间序列n
-N=length(n);                  %求时间序列n的点数N
-y1=zeros(1,N);                %新建一维N列的y1全0数组
-y2=zeros(1,N);                %新建一维N列的y2全0数组
-y1(find((n&gt;=min(n1))&amp;(n&lt;=max(n1))))=x1;  %为y1赋值
-y2(find((n&gt;=min(n2))&amp;(n&lt;=max(n2))))=x2;  %为y2赋值
-x=y1+y2;
-subplot(5,3,4),stem(n1,x1,&#39;filled&#39;,&#39;k&#39;);
-ylabel(&#39;x1(n)&#39;);
-axis([min(n),max(n),min(x),max(x)]);
-subplot(5,3,5),stem(n2,x2,&#39;filled&#39;,&#39;k&#39;);ylabel(&#39;x2(n)&#39;);
-axis([min(n),max(n),min(x),max(x)]);
-subplot(5,3,6),stem(n,x,&#39;filled&#39;,&#39;g&#39;);ylabel(&#39;x(n)&#39;);
-axis([min(n),max(n),min(x),max(x)]);
-%问题三
-n1=-4:10;              
-x1=3*exp(-0.25*n1);               %建立x1信号
-n2=-2:6;n02=-1;
-x2=[(n2-n02)&gt;=0];             %建立x2信号
-n=min([n1,n2]):max([n1,n2]);  %为x信号建立时间序列n
-N=length(n);                  %求时间序列n的点数N
-y1=zeros(1,N);                %新建一维N列的y1全0数组
-y2=zeros(1,N);                %新建一维N列的y2全0数组
-y1(find((n&gt;=min(n1))&amp;(n&lt;=max(n1))))=x1;  %为y1赋值
-y2(find((n&gt;=min(n2))&amp;(n&lt;=max(n2))))=x2;  %为y2赋值
-x=y1.*y2;
-subplot(5,3,7),stem(n1,x1,&#39;filled&#39;,&#39;k&#39;);
-ylabel(&#39;x1(n)&#39;);
-axis([min(n),max(n),min(x1),max(x1)]);
-subplot(5,3,8),stem(n2,x2,&#39;filled&#39;,&#39;k&#39;);ylabel(&#39;x2(n)&#39;);
-axis([min(n),max(n),min(x2),max(x2)]);
-subplot(5,3,9),stem(n,x,&#39;filled&#39;,&#39;g&#39;);ylabel(&#39;x(n)&#39;);
-axis([min(n),max(n),min(x),max(x)]);
-%问题四
-n1=-4;n2=4;n0=1;       
-n=n1:n2;                   %生成离散信号的时间序列
-x=[n&gt;=n0];                  %生成离散信号x(n)
-x1=fliplr(x);        %此函数实现序列的反折
-n1=-fliplr(n);
-subplot(5,3,10),stem(n,x,&#39;filled&#39;,&#39;k&#39;);
-title(&#39;x(n)&#39;);
-subplot(5,3,11),stem(n1,x1,&#39;filled&#39;,&#39;g&#39;);
-title(&#39;x(-n)&#39;);
-%问题五
-n=0:20;tn=n./10; %每周期取10个点
-x=cos(2*pi*tn);    %建立原信号x(n)
-x1=cos(2*pi*tn*3); %建立x(3n)信号
-x2=cos(2*pi*tn/3); %建立x(n/3)信号
-subplot(5,3,12),stem(tn,x,&#39;filled&#39;,&#39;k&#39;);    
-ylabel(&#39;x(n)&#39;);
-axis([0,2,min(x),max(x)]);
-subplot(5,3,13),stem(tn,x1,&#39;filled&#39;,&#39;g&#39;);ylabel(&#39;x(3n)&#39;);
-axis([0,2,min(x),max(x)]);
-subplot(5,3,14),stem(tn,x2,&#39;filled&#39;,&#39;g&#39;); ylabel(&#39;x(n/3)&#39;);
-axis([0,2,min(x),max(x)]); 
-</code></pre>
-<p><a href="https://pic1.zhimg.com/80/v2-32c635ccff58c090d70552ad67c313ee_720w.webp?source=1940ef5c" title="上述问题的仿真结果"><img data-src="C:\Users\DELL\Pictures" alt="上述问题的仿真结果" title="上述问题的仿真结果"></a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>极限的几种求法</title>
-    <url>/2023/08/05/%E6%B1%82%E6%9E%81%E9%99%90%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="极限的几种求法"><a href="#极限的几种求法" class="headerlink" title="极限的几种求法"></a>极限的几种求法</h1><ol>
-<li>正常代入求极限<br>  x趋近多少就代入多少（在保证算式是有意义的）</li>
-<li>等量代换求极限</li>
-<li>用比阶的方法求极限<ol>
-<li>如极限为一个常数，分母的极限还为0，则分子的极限也为0。</li>
-<li>高阶无穷小+低阶无穷小&#x3D;低阶无穷小<span id="more"></span></li>
-</ol>
-</li>
-<li>用泰勒公式，或麦克劳林公式求极限<ol>
-<li>一般看见分子中有加减法的时候一般可以用泰勒公式或麦克劳林公式展开求。</li>
-<li>在展开的时候，<br>  &emsp; 若为A&#x2F;B型，则遵循上下同阶原则。要展开到与分母的最高次项一致，若遇到两项相乘展开的情况，则要将得到分母最高次项的展开式都列出来。	 如：分母为4次项，则分子展开要有2次项乘2次项，还要有1次项乘3次项。<br> &emsp; 若为A-B型，则遵循幂次最低原则。</li>
-</ol>
-</li>
-<li>等价量替换求极限<br>  若极限对象中有积分项，积分中有别的参数，则需要进行等价量替换，当积分中无别的参数后，可以进行求导或其他操作。</li>
-<li>洛必达法则求极限<br>  只能用于0&#x2F;0型和无穷&#x2F;无穷型。</li>
-<li>导数定阶法比阶<br>  将极限对象求导，当x–&gt;0时,<br>  若结果为x^k形式，则原函数f(x)等价于(1&#x2F;k+1)x^(k+1)<br>  若结果为A（常数）形式，则原函数f(x)等价于Ax</li>
-<li>数学归纳法求极限（数列极限）<ol>
-<li>首先，要证明此数列有界+单调。<ol>
-<li>有界的几种证法：利用均值不等式、找递推式的范围或先在草纸上算出极限后拿极限作为界来进行归纳试验，看看是否可行等方法。</li>
-<li>单调的几种证法：利用前一项减后一项看是否大于0或小于0、利用均值不等式的替换或利用等式两边同号的特性（同号可以证明数列是单调的）。</li>
-</ol>
-</li>
-<li>之后，再设极限为A，代入递推公式将极限求出。</li>
-</ol>
-</li>
-<li>利用夹逼准则求极限（数列极限）<br>  夹逼准则就是将极限对象进行放缩，大于一个多项式小于一个多项式，若这两个多项式的极限相同，则可以证明极限对象的极限与这两个多项式的极限相同。</li>
-<li>利用定积分求极限（数列极限）<br> 定积分求极限可以与夹逼准则一起使用。</li>
-<li>利用拉格朗日中值定理求极限<br> 若遇到分子中有两项长得很像但稍有不同的式子时，可以考虑用拉格朗日中值定理。将这两项整合到一起，之后通过夹逼定理将中间项的极限求出就可以得出极限对象的结果。</li>
-<li>凑平方差法求极限</li>
-<li>凑二倍角公式法求极限</li>
-<li>裂项相消法求极限</li>
-<li>利用函数极限求数列极限（最常见的是（1^无穷）的转化）</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>政治</title>
     <url>/2023/08/01/%E6%94%BF%E6%B2%BB/</url>
     <content><![CDATA[<h1 id="马克思主义基本原理"><a href="#马克思主义基本原理" class="headerlink" title="马克思主义基本原理"></a>马克思主义基本原理</h1><h2 id="导论"><a href="#导论" class="headerlink" title="导论"></a>导论</h2><ol>
@@ -193,7 +71,7 @@ axis([0,2,min(x),max(x)]);
 </li>
 </ol>
 <h2 id="马克思主义哲学"><a href="#马克思主义哲学" class="headerlink" title="马克思主义哲学"></a>马克思主义哲学</h2><p>马克思主义哲学分为四大板块：<strong>辩证唯物论、唯物辩证法、认识论以及唯物史观</strong>。</p>
-<h3 id="第一章-世界的物质性及发展规律"><a href="#第一章-世界的物质性及发展规律" class="headerlink" title="第一章  世界的物质性及发展规律"></a>第一章  世界的物质性及发展规律</h3><h4 id="哲学及其基本问题"><a href="#哲学及其基本问题" class="headerlink" title="哲学及其基本问题"></a>哲学及其基本问题</h4><p>哲学的基本问题：思维与存在的关系问题。其中，<strong>思维</strong>指的是<strong>意识</strong>；<strong>存在</strong>指的是<strong>物质</strong>。<br>一. 由上述问题衍生出了两个分支：</p>
+<h3 id="第一章-世界的物质性及发展规律（辩证唯物论、唯物辩证法）"><a href="#第一章-世界的物质性及发展规律（辩证唯物论、唯物辩证法）" class="headerlink" title="第一章  世界的物质性及发展规律（辩证唯物论、唯物辩证法）"></a>第一章  世界的物质性及发展规律（辩证唯物论、唯物辩证法）</h3><h4 id="哲学及其基本问题"><a href="#哲学及其基本问题" class="headerlink" title="哲学及其基本问题"></a>哲学及其基本问题</h4><p>哲学的基本问题：思维与存在的关系问题。其中，<strong>思维</strong>指的是<strong>意识</strong>；<strong>存在</strong>指的是<strong>物质</strong>。<br>一. 由上述问题衍生出了两个分支：</p>
 <ol>
 <li>存在和思维究竟谁是世界的本原？–&gt; 产生了唯物主义和唯心主义<ol>
 <li>唯物主义：物质为第一性<ol>
@@ -586,7 +464,7 @@ axis([0,2,min(x),max(x)]);
 </ul>
 </li>
 </ol>
-<h3 id="第二章-实践与认识及其发展规律"><a href="#第二章-实践与认识及其发展规律" class="headerlink" title="第二章  实践与认识及其发展规律"></a>第二章  实践与认识及其发展规律</h3><h4 id="实践与认识"><a href="#实践与认识" class="headerlink" title="实践与认识"></a>实践与认识</h4><p>一. 实践</p>
+<h3 id="第二章-实践与认识及其发展规律（认识论）"><a href="#第二章-实践与认识及其发展规律（认识论）" class="headerlink" title="第二章  实践与认识及其发展规律（认识论）"></a>第二章  实践与认识及其发展规律（认识论）</h3><h4 id="实践与认识"><a href="#实践与认识" class="headerlink" title="实践与认识"></a>实践与认识</h4><p>一. 实践</p>
 <ol>
 <li>实践的观点<ol>
 <li>错误的观点<ol>
@@ -914,6 +792,128 @@ axis([0,2,min(x),max(x)]);
 <li>先进的社会意识对社会发展起积极促进作用，落后的社会意识对社会发展起消极的阻碍作用。</li>
 </ol>
 </li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>matlab怎么表示一个离散序列的时移？</title>
+    <url>/2023/07/18/matlab%E7%94%BB%E7%A6%BB%E6%95%A3%E5%BA%8F%E5%88%97%E5%9B%BE%E5%83%8F/</url>
+    <content><![CDATA[<p>下面用几个例子解释一下：</p>
+<p>（1）序列的移位：y（n）&#x3D;u（n）；y1（n）&#x3D;u（n+3）；y2（n）&#x3D;u（n-3）（-5&lt;n&lt;5）；</p>
+<p>（2）序列的相加：x1（n）&#x3D;u(n-2)（-1&lt;n&lt;6），x2（n）&#x3D;u(n-1),求x(n)&#x3D;x1(n)+x2(n)；</p>
+<p>（3）序列相乘：x1（n）&#x3D;3e^-0.25n (-4&lt;n&lt;10),x2(n)&#x3D;u(n+1)(-2&lt;n&lt;6),求x（n）&#x3D;x1（n）x2（n）；</p>
+<p>（4）序列反折：x（n）&#x3D;u（n-1）（-4&lt;n&lt;4），求x（-n）；</p>
+<p>（5）序列的尺度变换x（n）&#x3D;cos（2pi*n）求x（3n）和x（n&#x2F;3）；</p>
+<span id="more"></span>      
+
+<pre><code>%问题一
+n1=-5;n2=5;k0=0;k1=-3;k2=3;       
+n=n1:n2;                           %生成离散信号的时间序列
+y=[n&gt;=k0];                        %生成离散信号y(n)
+y1=[(n-k1)&gt;=0];                    %生成离散信号y1(n)
+y2=[(n-k2)&gt;=0];                    %生成离散信号y2(n)
+subplot(5,3,1),stem(n, y,&#39;filled&#39;,&#39;k&#39;); ylabel(&#39;u(n)&#39;);
+subplot(5,3,2),stem(n, y1,&#39;filled&#39;,&#39;g&#39;);ylabel(&#39;u(n+3)&#39;);
+subplot(5,3,3),stem(n, y2,&#39;filled&#39;,&#39;g&#39;); ylabel(&#39;u(n-3)&#39;);
+%问题二
+n1=-1:6;n01=2;               
+x1=[(n1-n01)&gt;=0];             %建立x1信号
+n2=-3:8;n02=1;
+x2=[(n2-n02)&gt;=0];             %建立x2信号
+n=min([n1,n2]):max([n1,n2]);  %为x信号建立时间序列n
+N=length(n);                  %求时间序列n的点数N
+y1=zeros(1,N);                %新建一维N列的y1全0数组
+y2=zeros(1,N);                %新建一维N列的y2全0数组
+y1(find((n&gt;=min(n1))&amp;(n&lt;=max(n1))))=x1;  %为y1赋值
+y2(find((n&gt;=min(n2))&amp;(n&lt;=max(n2))))=x2;  %为y2赋值
+x=y1+y2;
+subplot(5,3,4),stem(n1,x1,&#39;filled&#39;,&#39;k&#39;);
+ylabel(&#39;x1(n)&#39;);
+axis([min(n),max(n),min(x),max(x)]);
+subplot(5,3,5),stem(n2,x2,&#39;filled&#39;,&#39;k&#39;);ylabel(&#39;x2(n)&#39;);
+axis([min(n),max(n),min(x),max(x)]);
+subplot(5,3,6),stem(n,x,&#39;filled&#39;,&#39;g&#39;);ylabel(&#39;x(n)&#39;);
+axis([min(n),max(n),min(x),max(x)]);
+%问题三
+n1=-4:10;              
+x1=3*exp(-0.25*n1);               %建立x1信号
+n2=-2:6;n02=-1;
+x2=[(n2-n02)&gt;=0];             %建立x2信号
+n=min([n1,n2]):max([n1,n2]);  %为x信号建立时间序列n
+N=length(n);                  %求时间序列n的点数N
+y1=zeros(1,N);                %新建一维N列的y1全0数组
+y2=zeros(1,N);                %新建一维N列的y2全0数组
+y1(find((n&gt;=min(n1))&amp;(n&lt;=max(n1))))=x1;  %为y1赋值
+y2(find((n&gt;=min(n2))&amp;(n&lt;=max(n2))))=x2;  %为y2赋值
+x=y1.*y2;
+subplot(5,3,7),stem(n1,x1,&#39;filled&#39;,&#39;k&#39;);
+ylabel(&#39;x1(n)&#39;);
+axis([min(n),max(n),min(x1),max(x1)]);
+subplot(5,3,8),stem(n2,x2,&#39;filled&#39;,&#39;k&#39;);ylabel(&#39;x2(n)&#39;);
+axis([min(n),max(n),min(x2),max(x2)]);
+subplot(5,3,9),stem(n,x,&#39;filled&#39;,&#39;g&#39;);ylabel(&#39;x(n)&#39;);
+axis([min(n),max(n),min(x),max(x)]);
+%问题四
+n1=-4;n2=4;n0=1;       
+n=n1:n2;                   %生成离散信号的时间序列
+x=[n&gt;=n0];                  %生成离散信号x(n)
+x1=fliplr(x);        %此函数实现序列的反折
+n1=-fliplr(n);
+subplot(5,3,10),stem(n,x,&#39;filled&#39;,&#39;k&#39;);
+title(&#39;x(n)&#39;);
+subplot(5,3,11),stem(n1,x1,&#39;filled&#39;,&#39;g&#39;);
+title(&#39;x(-n)&#39;);
+%问题五
+n=0:20;tn=n./10; %每周期取10个点
+x=cos(2*pi*tn);    %建立原信号x(n)
+x1=cos(2*pi*tn*3); %建立x(3n)信号
+x2=cos(2*pi*tn/3); %建立x(n/3)信号
+subplot(5,3,12),stem(tn,x,&#39;filled&#39;,&#39;k&#39;);    
+ylabel(&#39;x(n)&#39;);
+axis([0,2,min(x),max(x)]);
+subplot(5,3,13),stem(tn,x1,&#39;filled&#39;,&#39;g&#39;);ylabel(&#39;x(3n)&#39;);
+axis([0,2,min(x),max(x)]);
+subplot(5,3,14),stem(tn,x2,&#39;filled&#39;,&#39;g&#39;); ylabel(&#39;x(n/3)&#39;);
+axis([0,2,min(x),max(x)]); 
+</code></pre>
+<p><a href="https://pic1.zhimg.com/80/v2-32c635ccff58c090d70552ad67c313ee_720w.webp?source=1940ef5c" title="上述问题的仿真结果"><img data-src="C:\Users\DELL\Pictures" alt="上述问题的仿真结果" title="上述问题的仿真结果"></a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>极限的几种求法</title>
+    <url>/2023/08/05/%E6%B1%82%E6%9E%81%E9%99%90%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="极限的几种求法"><a href="#极限的几种求法" class="headerlink" title="极限的几种求法"></a>极限的几种求法</h1><ol>
+<li>正常代入求极限<br>  x趋近多少就代入多少（在保证算式是有意义的）</li>
+<li>等量代换求极限</li>
+<li>用比阶的方法求极限<ol>
+<li>如极限为一个常数，分母的极限还为0，则分子的极限也为0。</li>
+<li>高阶无穷小+低阶无穷小&#x3D;低阶无穷小<span id="more"></span></li>
+</ol>
+</li>
+<li>用泰勒公式，或麦克劳林公式求极限<ol>
+<li>一般看见分子中有加减法的时候一般可以用泰勒公式或麦克劳林公式展开求。</li>
+<li>在展开的时候，<br>  &emsp; 若为A&#x2F;B型，则遵循上下同阶原则。要展开到与分母的最高次项一致，若遇到两项相乘展开的情况，则要将得到分母最高次项的展开式都列出来。	 如：分母为4次项，则分子展开要有2次项乘2次项，还要有1次项乘3次项。<br> &emsp; 若为A-B型，则遵循幂次最低原则。</li>
+</ol>
+</li>
+<li>等价量替换求极限<br>  若极限对象中有积分项，积分中有别的参数，则需要进行等价量替换，当积分中无别的参数后，可以进行求导或其他操作。</li>
+<li>洛必达法则求极限<br>  只能用于0&#x2F;0型和无穷&#x2F;无穷型。</li>
+<li>导数定阶法比阶<br>  将极限对象求导，当x–&gt;0时,<br>  若结果为x^k形式，则原函数f(x)等价于(1&#x2F;k+1)x^(k+1)<br>  若结果为A（常数）形式，则原函数f(x)等价于Ax</li>
+<li>数学归纳法求极限（数列极限）<ol>
+<li>首先，要证明此数列有界+单调。<ol>
+<li>有界的几种证法：利用均值不等式、找递推式的范围或先在草纸上算出极限后拿极限作为界来进行归纳试验，看看是否可行等方法。</li>
+<li>单调的几种证法：利用前一项减后一项看是否大于0或小于0、利用均值不等式的替换或利用等式两边同号的特性（同号可以证明数列是单调的）。</li>
+</ol>
+</li>
+<li>之后，再设极限为A，代入递推公式将极限求出。</li>
+</ol>
+</li>
+<li>利用夹逼准则求极限（数列极限）<br>  夹逼准则就是将极限对象进行放缩，大于一个多项式小于一个多项式，若这两个多项式的极限相同，则可以证明极限对象的极限与这两个多项式的极限相同。</li>
+<li>利用定积分求极限（数列极限）<br> 定积分求极限可以与夹逼准则一起使用。</li>
+<li>利用拉格朗日中值定理求极限<br> 若遇到分子中有两项长得很像但稍有不同的式子时，可以考虑用拉格朗日中值定理。将这两项整合到一起，之后通过夹逼定理将中间项的极限求出就可以得出极限对象的结果。</li>
+<li>凑平方差法求极限</li>
+<li>凑二倍角公式法求极限</li>
+<li>裂项相消法求极限</li>
+<li>利用函数极限求数列极限（最常见的是（1^无穷）的转化）</li>
 </ol>
 ]]></content>
   </entry>
