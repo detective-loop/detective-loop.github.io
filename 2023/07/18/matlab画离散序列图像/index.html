@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="下面用几个例子解释一下： （1）序列的移位：y（n）&#x3D;u（n）；y1（n）&#x3D;u（n+3）；y2（n）&#x3D;u（n-3）（-5&lt;n&lt;5）； （2）序列的相加：x1（n）&#x3D;u(n-2)（-1&lt;n&lt;6），x2（n）&#x3D;u(n-1),求x(n)&#x3D;x1(n)+x2(n)； （3）序列相乘：x1（n）&#x3D;3e^-0.25n (-4&lt;n&lt;10),x2(n)&#x3D;u(n+1)(-2&amp;">
+  <meta name="description" content="下面用几个例子解释一下： （1）序列的移位：y（n）&#x3D;u（n）；y1（n）&#x3D;u（n+3）；y2（n）&#x3D;u（n-3）（-5&lt;n&lt;5）； （2）序列的相加：x1（n）&#x3D;u(n-2)（-1&lt;n&lt;6），x2（n）&#x3D;u(n-1),求x(n)&#x3D;x1(n)+x2(n)； （3）序列相乘：x1（n）&#x3D;3e^-0.25n">
 <meta property="og:type" content="article">
 <meta property="og:title" content="matlab怎么表示一个离散序列的时移？">
 <meta property="og:url" content="http://example.com/2023/07/18/matlab%E7%94%BB%E7%A6%BB%E6%95%A3%E5%BA%8F%E5%88%97%E5%9B%BE%E5%83%8F/index.html">
 <meta property="og:site_name" content="南风之录">
-<meta property="og:description" content="下面用几个例子解释一下： （1）序列的移位：y（n）&#x3D;u（n）；y1（n）&#x3D;u（n+3）；y2（n）&#x3D;u（n-3）（-5&lt;n&lt;5）； （2）序列的相加：x1（n）&#x3D;u(n-2)（-1&lt;n&lt;6），x2（n）&#x3D;u(n-1),求x(n)&#x3D;x1(n)+x2(n)； （3）序列相乘：x1（n）&#x3D;3e^-0.25n (-4&lt;n&lt;10),x2(n)&#x3D;u(n+1)(-2&amp;">
+<meta property="og:description" content="下面用几个例子解释一下： （1）序列的移位：y（n）&#x3D;u（n）；y1（n）&#x3D;u（n+3）；y2（n）&#x3D;u（n-3）（-5&lt;n&lt;5）； （2）序列的相加：x1（n）&#x3D;u(n-2)（-1&lt;n&lt;6），x2（n）&#x3D;u(n-1),求x(n)&#x3D;x1(n)+x2(n)； （3）序列相乘：x1（n）&#x3D;3e^-0.25n">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="c:\Users\DELL\Pictures">
 <meta property="article:published_time" content="2023-07-18T08:36:25.037Z">
@@ -264,12 +264,13 @@
 
       
         <p>下面用几个例子解释一下：</p>
-<p>（1）序列的移位：y（n）=u（n）；y1（n）=u（n+3）；y2（n）=u（n-3）（-5&lt;n&lt;5）；</p>
-<p>（2）序列的相加：x1（n）=u(n-2)（-1&lt;n&lt;6），x2（n）=u(n-1),求x(n)=x1(n)+x2(n)；</p>
-<p>（3）序列相乘：x1（n）=3e^-0.25n (-4&lt;n&lt;10),x2(n)=u(n+1)(-2&lt;n&lt;6),求x（n）=x1（n）x2（n）；</p>
-<p>（4）序列反折：x（n）=u（n-1）（-4&lt;n&lt;4），求x（-n）；</p>
-<p>（5）序列的尺度变换x（n）=cos（2pi*n）求x（3n）和x（n/3）；</p>
-<span id="more"></span>
+<p>（1）序列的移位：y（n）&#x3D;u（n）；y1（n）&#x3D;u（n+3）；y2（n）&#x3D;u（n-3）（-5&lt;n&lt;5）；</p>
+<p>（2）序列的相加：x1（n）&#x3D;u(n-2)（-1&lt;n&lt;6），x2（n）&#x3D;u(n-1),求x(n)&#x3D;x1(n)+x2(n)；</p>
+<p>（3）序列相乘：x1（n）&#x3D;3e^-0.25n (-4&lt;n&lt;10),x2(n)&#x3D;u(n+1)(-2&lt;n&lt;6),求x（n）&#x3D;x1（n）x2（n）；</p>
+<p>（4）序列反折：x（n）&#x3D;u（n-1）（-4&lt;n&lt;4），求x（-n）；</p>
+<p>（5）序列的尺度变换x（n）&#x3D;cos（2pi*n）求x（3n）和x（n&#x2F;3）；</p>
+<span id="more"></span>      
+
 <pre><code>%问题一
 n1=-5;n2=5;k0=0;k1=-3;k2=3;       
 n=n1:n2;                           %生成离散信号的时间序列
@@ -338,8 +339,9 @@ axis([0,2,min(x),max(x)]);
 subplot(5,3,13),stem(tn,x1,&#39;filled&#39;,&#39;g&#39;);ylabel(&#39;x(3n)&#39;);
 axis([0,2,min(x),max(x)]);
 subplot(5,3,14),stem(tn,x2,&#39;filled&#39;,&#39;g&#39;); ylabel(&#39;x(n/3)&#39;);
-axis([0,2,min(x),max(x)]); </code></pre>
-<p><a target="_blank" rel="noopener" href="https://pic1.zhimg.com/80/v2-32c635ccff58c090d70552ad67c313ee_720w.webp?source=1940ef5c" title="上述问题的仿真结果"><img data-src="C:\Users\DELL\Pictures" title="上述问题的仿真结果" alt="上述问题的仿真结果" /></a></p>
+axis([0,2,min(x),max(x)]); 
+</code></pre>
+<p><a target="_blank" rel="noopener" href="https://pic1.zhimg.com/80/v2-32c635ccff58c090d70552ad67c313ee_720w.webp?source=1940ef5c" title="上述问题的仿真结果"><img data-src="C:\Users\DELL\Pictures" alt="上述问题的仿真结果" title="上述问题的仿真结果"></a></p>
 
     </div>
 
