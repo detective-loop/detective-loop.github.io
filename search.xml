@@ -85,84 +85,6 @@ axis([0,2,min(x),max(x)]);
 ]]></content>
   </entry>
   <entry>
-    <title>一元微分学的几种解题方法</title>
-    <url>/2023/08/27/%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6%E7%9A%84%E5%87%A0%E7%A7%8D%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>一. 求导题</p>
-<ol>
-<li><p>复合函数求导：将导数上下拆开求。</p>
-</li>
-<li><p>对数微分法：正常求导太难时可以先两边求对数后将乘法变为加法后再求导。</p>
-</li>
-<li><p>三个未知量相乘求导。</p>
-</li>
-<li><p>反函数的性质。</p>
-</li>
-<li><p>求高阶导数<span id="more"></span></p>
-<ul>
-<li>利用数学归纳法</li>
-<li>利用莱布尼兹公式法</li>
-<li>利用函数幂级数展开式的唯一性定理</li>
-</ul>
-</li>
-<li><p>反函数求导</p>
-</li>
-<li><p>泰勒公式的变形（两个未知量）</p>
-</li>
-</ol>
-<p>二. 证明题</p>
-<ol>
-<li><p>f(a)&#x3D;0，f(b)&#x3D;0，可以使用罗尔定理。</p>
-<ul>
-<li>倘若有一段是极限为0的情况，则需要用罗尔定理的推广形式（需要用极限的定义来证明一下）。</li>
-<li>可以通过多次使用罗尔定理来证明一个高阶导数在某处为0。</li>
-<li>出现两个数为0的时候不一定非得用罗尔定理去做，也可能是为了凑出两个拉格朗日中值定理而出现的。</li>
-</ul>
-</li>
-<li><p>f(a)&lt;0，f(b)&gt;0，可以使用零点定理。</p>
-<ul>
-<li>若出现f(x)&#x2F;x在0+处极限&lt;0的题，不仅要考虑到f(x)在0处的保号性问题，还要知道f(0)&#x3D;0。</li>
-</ul>
-</li>
-<li><p>f(a)&#x3D;A，f(b)&#x3D;B，f(x)连续，则可以使用介值定理（在（a,b）内存在一点c，使f(c)&#x3D;C，C在A和B之间，随意取。）</p>
-</li>
-<li><p>f(x)在b处取得最大值，且f(x)在b处的导数存在，则f(x)在b处的导数为0。（费马定理）</p>
-</li>
-<li><p>对于高阶导数的证明题，常利用带有拉格朗日余项的泰勒公式解决。</p>
-</li>
-<li><p>将等式求导后用设出的极值点反向代入求导后的隐函数中可以得到极值点的横坐标，再利用横坐标代入原函数等式中可以得到极值点的纵坐标值，这样极值点坐标就求出来了。</p>
-</li>
-<li><p>对于证明等式问题</p>
-<ul>
-<li>将某一参数移到等号一边，由其形态确定要设的辅助函数。</li>
-<li>考虑分别使用拉格朗日中制定理和柯西中值定理后相乘。</li>
-<li>把等号一侧的式子都移到另一侧，设另一侧为辅助函数后利用函数的一系列特性证明。</li>
-<li>利用回推的方法，将要证明的式子用已知条件一步一步回推，得到一个好证的式子后再去证明。</li>
-<li>设中间数，与要证明的式子建立等式后通过解方程的形式将设的值解出来后即可得证。</li>
-<li><strong>积分证明法。</strong></li>
-<li>利用介值定理设中间数的函数的数值证明。</li>
-</ul>
-</li>
-<li><p>对证明不等式问题</p>
-<ul>
-<li><p>利用好均值不等式（左右两边的不等式可以分别做）。</p>
-</li>
-<li><p>利用好绝对值不等式。</p>
-</li>
-<li><p>注意<strong>隐藏条件ln1&#x3D;0</strong></p>
-<ul>
-<li>可以通过这个条件利用拉格朗日中值定理将不等式进行转化后，依据中间值的范围推出结果。（当中间值的导数为0的时候，拉格朗日中值定理失效）</li>
-</ul>
-</li>
-<li><p>利用常数变异法做，将常数换成变量x，进而进行研究f(x)的特性从而得出结论。</p>
-</li>
-<li><p>利用函数的凹凸性证明不等式：利用一个简单函数（如lnx）的凹凸性证明不等式。</p>
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>政治</title>
     <url>/2023/08/01/%E6%94%BF%E6%B2%BB/</url>
     <content><![CDATA[<h1 id="马克思主义基本原理"><a href="#马克思主义基本原理" class="headerlink" title="马克思主义基本原理"></a>马克思主义基本原理</h1><h2 id="导论"><a href="#导论" class="headerlink" title="导论"></a>导论</h2><ol>
@@ -354,9 +276,9 @@ axis([0,2,min(x),max(x)]);
 <li><strong>意识在内容上是客观的（反映在某一对象上，如电脑、手机等），在形式上是主观的（反应在脑海之中）</strong><br></li>
 </ol>
 </li>
-<li>意识对物质具有反作用（**<em>分析题考点</em>**）<br><ol>
-<li><strong>物质决定意识，意识对物质具有反作用，这种反作用就是意识的能动作用</strong>。（能动作用指导实践）<br></li>
-<li>意识的能动作用主要及表现在：<br><br>1. 意识具有目的性和计划性。（人在认识客观世界的同时可以自己决定反映什么，不反映什么以及如何反映）<br><br>2. 意识具有创造性。（意识可以在思维中构造一个现实世界中没有的理想世界）<br><br>3. 意识具有指导实践改造客观世界的作用。（意识只能对外部世界进行近似正确的反应–&gt;有了自己的主观色彩）（实践也具有能动作用&lt;—受意识的指挥）<br><br>4. 意识具有调控人的行为和生理活动的作用。（笑一笑十年少，愁一愁白了头）<br></li>
+<li>意识对物质具有反作用（**<em>分析题考点</em>**）<ol>
+<li><strong>物质决定意识，意识对物质具有反作用，这种反作用就是意识的能动作用</strong>。（能动作用指导实践）</li>
+<li>意识的能动作用主要及表现在：<br>1. 意识具有目的性和计划性。（人在认识客观世界的同时可以自己决定反映什么，不反映什么以及如何反映）<br>2. 意识具有创造性。（意识可以在思维中构造一个现实世界中没有的理想世界）<br>3. 意识具有指导实践改造客观世界的作用。（意识只能对外部世界进行近似正确的反应–&gt;有了自己的主观色彩）（实践也具有能动作用&lt;—受意识的指挥）<br>4. 意识具有调控人的行为和生理活动的作用。（笑一笑十年少，愁一愁白了头）</li>
 </ol>
 </li>
 <li>物质与意识的辩证关系（对立统一关系、斗争同一关系、矛盾关系都是一个意思）（即相区别又相互联系）(<strong>做题时要看清题目重点偏向的是联系还是区别</strong>)<br><ol>
@@ -404,7 +326,7 @@ axis([0,2,min(x),max(x)]);
 <li>世界的物质统一性原理（除了运动的物质以外什么都没有（√））（世界的物质统一原理是马克思主义的基石）<br><ol>
 <li>世界的物质统一性首先体现在意识统一于物质。<br></li>
 <li>世界的物质统一性还体现于人类社会也统一于物质。（以前的旧唯物主义不把人类历史看做成物质而导致其成了不彻底的唯物主义）<br></li>
-<li>人类社会的物质性主要表现在：<br><br>1. 人类社会是物质世界的组成成分。<br><br>2. 人类社会获取生活资料的活动是<strong>物质性</strong>（实践）的活动。<br><br>3. 人类社会存在和发展的基础是物质资料的生产方式。<br></li>
+<li>人类社会的物质性主要表现在：<br>1. 人类社会是物质世界的组成成分。<br>2. 人类社会获取生活资料的活动是<strong>物质性</strong>（实践）的活动。<br>3. 人类社会存在和发展的基础是物质资料的生产方式。</li>
 </ol>
 <ul>
 <li>世界是统一的，即世界的本原是一个。<br></li>
@@ -1110,8 +1032,7 @@ axis([0,2,min(x),max(x)]);
 </ul>
 </li>
 </ol>
-<p>####社会历史发展的动力</p>
-<ol>
+<h4 id="社会历史发展的动力"><a href="#社会历史发展的动力" class="headerlink" title="社会历史发展的动力"></a>社会历史发展的动力</h4><ol>
 <li><strong>社会基本矛盾</strong>是社会历史发展中的第一动力。（<strong>根本动力</strong>）<ul>
 <li>生产力与生产关系，经济基础和上层建筑的矛盾是社会基本矛盾。</li>
 </ul>
@@ -1131,8 +1052,7 @@ axis([0,2,min(x),max(x)]);
 </ul>
 </li>
 </ol>
-<p>####人民群众在历史发展中的作用</p>
-<ol>
+<h4 id="人民群众在历史发展中的作用"><a href="#人民群众在历史发展中的作用" class="headerlink" title="人民群众在历史发展中的作用"></a>人民群众在历史发展中的作用</h4><ol>
 <li>人民群众是历史的创造者。<ul>
 <li>唯物史观立足于现实的人及其本质来把握历史的创造者。</li>
 <li>现实的人及其活动是社会历史存在的和发展的前提。</li>
@@ -1176,6 +1096,94 @@ axis([0,2,min(x),max(x)]);
 ]]></content>
   </entry>
   <entry>
+    <title>一元微分学的几种解题方法</title>
+    <url>/2023/08/27/%E4%B8%80%E5%85%83%E5%BE%AE%E5%88%86%E5%AD%A6%E7%9A%84%E5%87%A0%E7%A7%8D%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>一. 求导题</p>
+<ol>
+<li><p>复合函数求导：将导数上下拆开求。</p>
+</li>
+<li><p>对数微分法：正常求导太难时可以先两边求对数后将乘法变为加法后再求导。</p>
+</li>
+<li><p>三个未知量相乘求导。</p>
+</li>
+<li><p>反函数的性质。</p>
+</li>
+<li><p>求高阶导数<span id="more"></span></p>
+<ul>
+<li>利用数学归纳法</li>
+<li>利用莱布尼兹公式法</li>
+<li>利用函数幂级数展开式的唯一性定理</li>
+</ul>
+</li>
+<li><p>反函数求导</p>
+</li>
+<li><p>泰勒公式的变形（两个未知量）</p>
+</li>
+</ol>
+<p>二. 证明题</p>
+<ol>
+<li><p>f(a)&#x3D;0，f(b)&#x3D;0，可以使用罗尔定理。</p>
+<ul>
+<li>倘若有一段是极限为0的情况，则需要用罗尔定理的推广形式（需要用极限的定义来证明一下）。</li>
+<li>可以通过多次使用罗尔定理来证明一个高阶导数在某处为0。</li>
+<li>出现两个数为0的时候不一定非得用罗尔定理去做，也可能是为了凑出两个拉格朗日中值定理而出现的。</li>
+</ul>
+</li>
+<li><p>f(a)&lt;0，f(b)&gt;0，可以使用零点定理。</p>
+<ul>
+<li>若出现f(x)&#x2F;x在0+处极限&lt;0的题，不仅要考虑到f(x)在0处的保号性问题，还要知道f(0)&#x3D;0。</li>
+</ul>
+</li>
+<li><p>f(a)&#x3D;A，f(b)&#x3D;B，f(x)连续，则可以使用介值定理（在（a,b）内存在一点c，使f(c)&#x3D;C，C在A和B之间，随意取。）</p>
+</li>
+<li><p>f(x)在b处取得最大值，且f(x)在b处的导数存在，则f(x)在b处的导数为0。（费马定理）</p>
+</li>
+<li><p>对于高阶导数的证明题，常利用带有拉格朗日余项的泰勒公式解决。</p>
+</li>
+<li><p>将等式求导后用设出的极值点反向代入求导后的隐函数中可以得到极值点的横坐标，再利用横坐标代入原函数等式中可以得到极值点的纵坐标值，这样极值点坐标就求出来了。</p>
+</li>
+<li><p>对于证明等式问题</p>
+<ul>
+<li>将某一参数移到等号一边，由其形态确定要设的辅助函数。</li>
+<li>考虑分别使用拉格朗日中制定理和柯西中值定理后相乘。</li>
+<li>把等号一侧的式子都移到另一侧，设另一侧为辅助函数后利用函数的一系列特性证明。</li>
+<li>利用回推的方法，将要证明的式子用已知条件一步一步回推，得到一个好证的式子后再去证明。</li>
+<li>设中间数，与要证明的式子建立等式后通过解方程的形式将设的值解出来后即可得证。</li>
+<li><strong>积分证明法。</strong></li>
+<li>利用介值定理设中间数的函数的数值证明。</li>
+</ul>
+</li>
+<li><p>对证明不等式问题</p>
+<ul>
+<li><p>利用好均值不等式（左右两边的不等式可以分别做）。</p>
+</li>
+<li><p>利用好绝对值不等式。</p>
+</li>
+<li><p>注意<strong>隐藏条件ln1&#x3D;0</strong></p>
+<ul>
+<li>可以通过这个条件利用拉格朗日中值定理将不等式进行转化后，依据中间值的范围推出结果。（当中间值的导数为0的时候，拉格朗日中值定理失效）</li>
+</ul>
+</li>
+<li><p>利用常数变异法做，将常数换成变量x，进而进行研究f(x)的特性从而得出结论。</p>
+</li>
+<li><p>利用函数的凹凸性证明不等式：利用一个简单函数（如lnx）的凹凸性证明不等式。</p>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>日常词汇积累</title>
+    <url>/2023/07/23/%E8%8B%B1%E8%AF%AD%E7%A7%AF%E7%B4%AF/</url>
+    <content><![CDATA[<h1 id="04年英一词汇记录"><a href="#04年英一词汇记录" class="headerlink" title="04年英一词汇记录"></a>04年英一词汇记录</h1><p><em>juvenile</em>	&emsp;青少年<br><em>delinquency</em>	&emsp;犯罪<br><em>latter</em>	&emsp;后者<br><em>tentative</em>	&emsp;试探性的，初步的<span id="more"></span><br><em>neglect</em>	&emsp;忽视<br><em>not yet</em>	&emsp;还没有<br><em>commit</em>	&emsp;犯，触犯，承认<br><em>commenting</em>	&emsp;评论<br><em>consultation</em>  &emsp;咨询<br><em>incredible</em>    &emsp;不可思议的<br><em>incidence</em>     &emsp;发生率<br><em>provided</em>	&emsp;假如<br><em>exposure</em>	&emsp;暴露<br><em>supposing</em>	&emsp;假设<br><em>tempt</em>	        &emsp;引诱<br><em>implicit</em>	&emsp;含蓄的<br><em>criteria</em>	&emsp;标准<br><em>stumbled</em>	&emsp;步履艰难<br><em>notification</em>	&emsp;通知<br><em>drawback</em>     &emsp;缺点<br><em>narrowing</em>     &emsp;缩小，狭窄<br><em>eliminate</em>     &emsp;消除<br><em>abreast</em>	&emsp;并排<br><em>consider</em>	&emsp;考虑<br><em>look out</em>	&emsp;小心，照料<br><em>advisory</em>	&emsp;咨询<br><em>indispensable</em>  &emsp;不可缺少的<br><em>site</em>           &emsp;网站<br><em>predecessor</em>   &emsp;前任，前人，前身<br><em>humiliation</em>	&emsp;屈辱<br><em>award</em>	        &emsp;奖<br><em>shortlist</em>	&emsp;入围名单<br><em>recipients</em>      &emsp;收件人<br><em>plough</em>	&emsp;耕<br><em>conspicuous</em>	&emsp;显著的<br><em>puzzles</em>	&emsp;拼图，困惑<br><em>unintentional</em>	&emsp;无心的，无意的<br><em>noble</em>         &emsp;高贵的<br><em>rigorous</em>       &emsp;僵化的<br><em>reluctantly</em>     &emsp;不情愿地<br><em>entertainer</em>     &emsp;演员<br><em>entrepreneur</em>   &emsp;企业家<br><em>sake</em>          &emsp;缘故<br><em>pervasive</em>	&emsp;普遍的<br><em>counterbalance</em>	&emsp;平衡<br><em>trace</em>	        &emsp;追溯<br><em>distaste</em>	&emsp;厌恶<br><em>mind</em>          &emsp;精神<br><em>defend</em>        &emsp;维护<br><em>democracy</em>     &emsp;民主<br><em>continuing along this path</em>	&emsp;这样发展下去<br><em>resent</em>	        &emsp;憎恶<br><em>populist urges</em>	&emsp;大众化<br><em>elitism</em>        &emsp;精英主义<br><em>shut up</em>	&emsp;关在<br><em>innate</em>	        &emsp;先天的<br><em>grasp</em>  	&emsp;理解<br><em>ponder</em>	&emsp;思考<br><em>militantly</em>    &emsp;好战的<br><em>complementary</em> &emsp;互补的<br><em>evolve</em>         &emsp;进化</p>
+<h1 id="05年英一词汇记录"><a href="#05年英一词汇记录" class="headerlink" title="05年英一词汇记录"></a>05年英一词汇记录</h1><p><em>underrate</em>	&emsp;低估<br><em>perceive</em>	&emsp;认为<br><em>generate</em>	&emsp;生成<br><em>limit</em>  	&emsp;限制（数量、范围、个人发展）<br><em>confine</em>	&emsp;限制（活动、主题、监禁）<br><em>ignore</em>	&emsp;忽视<br><em>miss</em>		&emsp;错过<br><em>if only</em>		&emsp;即使，仅仅为了<br><em>only if</em>       &emsp;只有<br><em>as if</em>    	&emsp;好像<br><em>disperse</em>      &emsp;分散<br><em>diffuse</em>		&emsp;扩散<br><em>whereas</em>	&emsp;鉴于，然而（同while）<br><em>sign</em>		&emsp;迹象，征兆<br><em>stimuli</em>	&emsp;刺激<br><em>expose</em>	&emsp;暴露<br><em>incompetent</em>	&emsp;无能的，不能胜任的<br><em>grievance</em>	&emsp;抱怨不平<br><em>readily</em>	&emsp;轻而易举的，乐意的<br><em>couterparts</em>   &emsp;对应的事物<br><em>characteristics</em>  &emsp;性格<br><em>tokens</em>        &emsp;代币<br><em>adjoin</em>	&emsp;相邻<br><em>toss</em>		&emsp;扔<br><em>induce</em>	&emsp;诱导，导致<br><em>resentment</em>	&emsp;怨恨<br><em>guide</em>         &emsp;支配<br><em>preserve of people alone</em>           &emsp;人所独有的<br><em>abundantly</em>    &emsp;十分明显的<br><em>righteous</em>	&emsp;义愤填膺的，正义的<br><em>contrast</em>	&emsp;比较相异的地方形成对比<br><em>comparison</em>	&emsp;比较相似的地方找共同点<br><em>jealous</em>       &emsp;嫉妒的<br><em>incline</em>		&emsp;倾斜<br><em>attentive</em>	&emsp;注意的<br><em>temperament</em>	&emsp;气质<br><em>paralysis</em>	&emsp;瘫痪<br><em>steward</em>       &emsp;管家<br><em>initiative</em>       &emsp;倡议<br><em>critic</em>        &emsp;评论家，批评者<br><em>outcome</em>      &emsp;效果，结果<br><em>suspend</em>  	 &emsp;暂停<br><em>formulate</em>       &emsp;制定<br><em>disguise</em>	&emsp;伪装<br><em>byproduct</em>	&emsp;副产品<br><em>neural</em>	        &emsp;神经<br><em>thermostat</em>	&emsp;恒温器<br><em>intensely</em>      &emsp;激烈的<br><em>harness</em>        &emsp;利用<br><em>limbic</em>         &emsp;边缘<br><em>recurring</em>	&emsp;复发<br><em>modify</em>	&emsp;修改<br><em>prefrontal</em>	&emsp;前额的<br><em>cortex</em>        &emsp;皮层<br><em>visualize</em>	&emsp;可视化<br><em>permissive</em>	 &emsp;许可的<br><em>regrettable</em>  	&emsp;惋惜<br><em>cult</em>		&emsp;流行，邪教<br><em>elevate</em>       &emsp;提高<br><em>regard</em>        &emsp;认为<br><em>capture</em>       &emsp;抓住，捕获<br><em>oral</em>		&emsp;口头的<br><em>spontaneity</em>    &emsp;即兴发挥<br><em>craft</em>         &emsp;技巧<br><em>chunk</em>         &emsp;块<br><em>elaborate</em>	&emsp;精巧的<br><em>grief</em>		&emsp;悲伤<br><em>but all too</em>	&emsp;非常（同very）<br><em>controversy</em>   &emsp;争议<br><em>counter-culture</em>&emsp;反文化<br><em>denote</em>	 &emsp;表示<br><em>liveliness</em>  	&emsp;活力<br><em>informality</em>	&emsp;非正式<br><em>comtempt</em>       &emsp;蔑视<br><em>functional</em>     &emsp;有用的，功能<br><em>artistic</em>       &emsp;优美的，艺术的<br><em>humble</em>       &emsp;卑微的</p>
+<h1 id="06年英一词汇记录"><a href="#06年英一词汇记录" class="headerlink" title="06年英一词汇记录"></a>06年英一词汇记录</h1><p><em>bulk</em>		&emsp;散装<br><em>retain</em>		&emsp;保持<br><em>indeed</em>	&emsp;事实上，的确<br><em>now that</em>  	&emsp;既然<br><em>assist</em>	&emsp;援助<br><em>sustain</em>	&emsp;维持<br><em>hence</em>		&emsp;因此<br><em>lodge</em>		&emsp;小屋<br><em>dwelling</em>       &emsp;住宅<br><em>stroll</em>    	&emsp;漫步<br><em>while</em>          &emsp;虽然，但是<br><em>comprehensive</em>	&emsp;全面的<br><em>as</em>		&emsp;正如<br><em>coordination</em>	&emsp;协调<br><em>turn around one‘s life</em>	&emsp;改变自己的生活<br><em>comtemplative</em>	&emsp;沉思性<br><em>complementary</em>	&emsp;互补的<br><em>democratizing</em>	&emsp;民主化<br><em>deference</em>	&emsp;尊重、尊敬<br><em>absorb into</em>   &emsp;沉浸在<br><em>department store</em>  &emsp;百货商店<br><em>instead of</em>     &emsp;并不是<br><em>intimate</em>	&emsp;舒适的，亲密的<br><em>democratic act</em>	&emsp;大众化行为<br><em>index</em>		&emsp;指标<br><em>indices</em>	&emsp;指标<br><em>divisive</em>        &emsp;分裂<br><em>pockets of seething anger</em>           &emsp;骚乱地区<br><em>turbulent</em>    &emsp;湍流，动荡<br><em>deteriorate</em>	&emsp;恶化<br><em>monopolize</em>	&emsp;垄断<br><em>emergence</em>	&emsp;出现<br><em>constitute</em>    &emsp;产生、构成<br><em>superb</em>	&emsp;高超的<br><em>worthy</em>	&emsp;可敬的<br><em>beard</em>		&emsp;胡须<br><em>sandals</em>	&emsp;便鞋<br><em>rocket</em>        &emsp;飙升<br><em>clientele</em>     &emsp;客户<br><em>dedicate</em>        &emsp;嫩<br><em>bun</em>          &emsp;包子<br><em>subsidy</em>  	 &emsp;补贴<br><em>vessel</em>         &emsp;容器，大船<br><em>sonar</em>		&emsp;声呐<br><em>saturate</em>	&emsp;使饱和<br><em>marine</em>	 &emsp;海的<br><em>sustainable</em>	&emsp;可维持的，养的起的<br><em>crop from</em>      &emsp;收获<br><em>reduce by</em>     &emsp;降低了……减少了……<br><em>reduce to</em>     &emsp;降低到……减少到……<br><em>outlive</em>		&emsp;比<br><em>phony</em>		&emsp;虚伪的，骗人的<br><em>perpetual</em>	&emsp;永恒的<br><em>ideology</em>        &emsp;意识形态<br><em>misery</em>		&emsp;痛苦<br><em>worshipper</em>	 &emsp;崇拜者，拜神者<br><em>worm</em>  	&emsp;蠕虫<br><em>lure</em>		&emsp;引诱</p>
+<h1 id="07年英一词汇记录"><a href="#07年英一词汇记录" class="headerlink" title="07年英一词汇记录"></a>07年英一词汇记录</h1><h1 id="08年英一词汇记录"><a href="#08年英一词汇记录" class="headerlink" title="08年英一词汇记录"></a>08年英一词汇记录</h1><p><em>category</em>		&emsp;类别，种类<br><em>veteran</em>		&emsp;老兵，经验丰富的人<br><em>hormone</em>		&emsp;激素，荷尔蒙<br><em>reproductive</em>  	&emsp;生殖的，繁殖的<br><em>capacity</em>	&emsp;领悟能力，容积<br><em>durable</em>	&emsp;耐久的，耐用的，持久的<br><em>wear-and-tear</em>		&emsp;磨损<br><em>be susceptible to</em>		&emsp;易受……影响，对……敏感<br><em>anxiety disorder</em>        &emsp;焦虑症<br><em>be vulnerable to</em>    	&emsp;易受……伤害<br><em>chronic</em>          	&emsp;长期的，慢性的<br><em>domestic</em>		&emsp;家庭的，国内的<br><em>straightforward</em>		&emsp;简单的，坦诚的<br><em>affiliation</em>			&emsp;隶属，从属<br><em>commercial</em>	&emsp;盈利的，以获利为目的的<br><em>far-reaching</em>	&emsp;影响深远的；广泛的<br><em>endeavor</em>		&emsp;努力，尝试<br><em>association</em>	&emsp;协会，联盟<br><em>so-called</em>		&emsp;所谓的<br><em>site-licensing</em>     &emsp;网站许可<br><em>peer-review</em>  &emsp;同行评审<br><em>render</em>     &emsp;使成为，被要求，使变得……，处于……状态<br><em>archive</em>		&emsp;档案<br><em>rest with sb.</em>	&emsp;属于某人<br><em>specialize in</em>	&emsp;专攻，专门研究<br><em>copyright</em>	&emsp;版权<br><em>dramatically</em>        &emsp;明显地，剧烈地，戏剧性的<br><em>frame</em>       &emsp;体形，身材<br><em>obscure</em>    &emsp;使模糊<br><em>notably</em>	&emsp;尤其，极大程度上<br><em>protein</em>	&emsp;蛋白质<br><em>secular</em>	&emsp;世俗的，长期的<br><em>genetically</em>    &emsp;遗传地<br><em>architecture</em>	&emsp;建筑学<br><em>reconsider</em>	&emsp;重新考虑，重新定义<br><em>withstand</em>		&emsp;顶住，经受住<br><em>alter</em>		&emsp;改变，更改<br><em>military</em>        &emsp;军队的<br><em>by and large</em>     &emsp;总的说来，大体上说<br><em>toothless</em>        &emsp;没有牙齿的<br><em>jaw</em>          &emsp;下巴<br><em>spur</em>  	 &emsp;激励，鼓舞，马刺<br><em>examine</em>         &emsp;调查，审查，检查<br><em>bedrock</em>		&emsp;牢固基础，基本原则<br><em>congressional</em>	&emsp;美国国会的，立法机构的<br><em>formula</em>	 &emsp;方案，公式，配方，药方，惯用语<br><em>the Electoral College</em>	&emsp;选举人团<br><em>dental</em>      &emsp;牙齿的，牙科的<br><em>prestige</em>     &emsp;声望，威信<br><em>legislative</em>     &emsp;立法的，制定法律的<br><em>legislate</em>		&emsp;立法<br><em>legislature</em>		&emsp;立法机关<br><em>legislation</em>	&emsp;法律<br><em>savings account</em>        &emsp;金融储蓄账户<br><em>regard A as B</em>		&emsp;把A看作B<br><em>part with</em>	 &emsp;放弃，交出（不舍得的东西）<br><em>from the bottom up</em>  	&emsp;自下而上</p>
+<h1 id="09年英一词汇记录"><a href="#09年英一词汇记录" class="headerlink" title="09年英一词汇记录"></a>09年英一词汇记录</h1><p><em>unreflect</em>		&emsp;不思考<br><em>reflect on&#x2F;upon</em>		&emsp;深思<br><em>reflect</em>		&emsp;反映，思考<br><em>herd</em>  	&emsp;一群人<br><em>bypass</em>	&emsp;绕过<br><em>regulate</em>	&emsp;管理<br><em>guide</em>		&emsp;引导<br><em>track</em>		&emsp;跟踪<br><em>series</em>        &emsp;系列<br><em>characteristic</em>    	&emsp;特征<br><em>part with</em>          	&emsp;放弃<br><em>precision</em>		&emsp;精确<br><em>prescription</em>		&emsp;处方<br><em>rage</em>			&emsp;风靡一时，流行；盛怒<br><em>used to do</em>	&emsp;过去常常做（现在不做）<br><em>pass down</em>	&emsp;传递<br><em>lump</em>		&emsp;把……归并一起<br><em>systematically</em>	&emsp;系统地、有条理地<br><em>trace</em>		&emsp;追溯<br><em>excessive</em>     &emsp;过分的<br><em>be subject to</em>  &emsp;受……支配、常遭受……<br><em>accurate</em>     &emsp;精确<br><em>exact</em>		&emsp;精确<br><em>exceed</em>	&emsp;超过<br><em>conventional</em>	&emsp;常规的<br><em>substantially</em>	&emsp;非常，大大地<br><em>deride</em>        &emsp;嘲笑、愚弄<br><em>in turn</em>       &emsp;继而，相应地，依次<br><em>result from</em>    &emsp;……的原因、归咎于……<br><em>owe A to B</em>	&emsp;因为B所以A<br><em>priority</em>	&emsp;优先于<br><em>prior to</em>	&emsp;在……之前<br><em>constraint</em>    &emsp;约束<br><em>in keeping with</em>	&emsp;与……保持一致<br><em>attach importance to</em>	&emsp;重视，着重于……<br><em>couterpart</em>		&emsp;职位相当的人，对应的事物<br><em>constrain</em>	&emsp;限制、约束<br><em>curb</em>        &emsp;限制、约束<br><em>recession</em>     &emsp;经济衰退，经济萎缩<br><em>rate</em>        &emsp;估计<br><em>pay little attention to</em>          &emsp;不注重……<br><em>consider……as……</em>  	 &emsp;把……看做……<br><em>comparatively</em>         &emsp;相对地、比较上<br><em>mock</em>		&emsp;嘲笑，不尊重<br><em>prospect</em>	&emsp;前景，可能性<br><em>be obsessed with</em>	 &emsp;痴迷于<br><em>be engaged in</em>	&emsp;从事于、参与、忙于<br><em>let alone</em>      &emsp;更不必说<br><em>civility</em>     &emsp;礼貌、客气、彬彬有礼<br><em>earnestness</em>     &emsp;认真，诚挚<br><em>craftsman</em>		&emsp;工匠，手艺人<br><em>intellectualize</em>		&emsp;使智能化<br><em>minister</em>	&emsp;牧师<br><em>unfold</em>        &emsp;逐渐展开、打开<br><em>philosophy</em>		&emsp;哲学，生活的信条<br><em>preoccupation</em>	 &emsp;全神关注<br><em>extensively</em>  	&emsp;广阔地，广泛地</p>
+]]></content>
+  </entry>
+  <entry>
     <title>极限的几种求法</title>
     <url>/2023/08/05/%E6%B1%82%E6%9E%81%E9%99%90%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h1 id="极限的几种求法"><a href="#极限的几种求法" class="headerlink" title="极限的几种求法"></a>极限的几种求法</h1><ol>
@@ -1211,16 +1219,6 @@ axis([0,2,min(x),max(x)]);
 <li>裂项相消法求极限</li>
 <li>利用函数极限求数列极限（最常见的是（1^无穷）的转化）</li>
 </ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>日常词汇积累</title>
-    <url>/2023/07/23/%E8%8B%B1%E8%AF%AD%E7%A7%AF%E7%B4%AF/</url>
-    <content><![CDATA[<h1 id="04年英一词汇记录"><a href="#04年英一词汇记录" class="headerlink" title="04年英一词汇记录"></a>04年英一词汇记录</h1><p><em>juvenile</em>	&emsp;青少年<br><em>delinquency</em>	&emsp;犯罪<br><em>latter</em>	&emsp;后者<br><em>tentative</em>	&emsp;试探性的，初步的<span id="more"></span><br><em>neglect</em>	&emsp;忽视<br><em>not yet</em>	&emsp;还没有<br><em>commit</em>	&emsp;犯，触犯，承认<br><em>commenting</em>	&emsp;评论<br><em>consultation</em>  &emsp;咨询<br><em>incredible</em>    &emsp;不可思议的<br><em>incidence</em>     &emsp;发生率<br><em>provided</em>	&emsp;假如<br><em>exposure</em>	&emsp;暴露<br><em>supposing</em>	&emsp;假设<br><em>tempt</em>	        &emsp;引诱<br><em>implicit</em>	&emsp;含蓄的<br><em>criteria</em>	&emsp;标准<br><em>stumbled</em>	&emsp;步履艰难<br><em>notification</em>	&emsp;通知<br><em>drawback</em>     &emsp;缺点<br><em>narrowing</em>     &emsp;缩小，狭窄<br><em>eliminate</em>     &emsp;消除<br><em>abreast</em>	&emsp;并排<br><em>consider</em>	&emsp;考虑<br><em>look out</em>	&emsp;小心，照料<br><em>advisory</em>	&emsp;咨询<br><em>indispensable</em>  &emsp;不可缺少的<br><em>site</em>           &emsp;网站<br><em>predecessor</em>   &emsp;前任，前人，前身<br><em>humiliation</em>	&emsp;屈辱<br><em>award</em>	        &emsp;奖<br><em>shortlist</em>	&emsp;入围名单<br><em>recipients</em>      &emsp;收件人<br><em>plough</em>	&emsp;耕<br><em>conspicuous</em>	&emsp;显著的<br><em>puzzles</em>	&emsp;拼图，困惑<br><em>unintentional</em>	&emsp;无心的，无意的<br><em>noble</em>         &emsp;高贵的<br><em>rigorous</em>       &emsp;僵化的<br><em>reluctantly</em>     &emsp;不情愿地<br><em>entertainer</em>     &emsp;演员<br><em>entrepreneur</em>   &emsp;企业家<br><em>sake</em>          &emsp;缘故<br><em>pervasive</em>	&emsp;普遍的<br><em>counterbalance</em>	&emsp;平衡<br><em>trace</em>	        &emsp;追溯<br><em>distaste</em>	&emsp;厌恶<br><em>mind</em>          &emsp;精神<br><em>defend</em>        &emsp;维护<br><em>democracy</em>     &emsp;民主<br><em>continuing along this path</em>	&emsp;这样发展下去<br><em>resent</em>	        &emsp;憎恶<br><em>populist urges</em>	&emsp;大众化<br><em>elitism</em>        &emsp;精英主义<br><em>shut up</em>	&emsp;关在<br><em>innate</em>	        &emsp;先天的<br><em>grasp</em>  	&emsp;理解<br><em>ponder</em>	&emsp;思考<br><em>militantly</em>    &emsp;好战的<br><em>complementary</em> &emsp;互补的<br><em>evolve</em>         &emsp;进化</p>
-<h1 id="05年英一词汇记录"><a href="#05年英一词汇记录" class="headerlink" title="05年英一词汇记录"></a>05年英一词汇记录</h1><p><em>underrate</em>	&emsp;低估<br><em>perceive</em>	&emsp;认为<br><em>generate</em>	&emsp;生成<br><em>limit</em>  	&emsp;限制（数量、范围、个人发展）<br><em>confine</em>	&emsp;限制（活动、主题、监禁）<br><em>ignore</em>	&emsp;忽视<br><em>miss</em>		&emsp;错过<br><em>if only</em>		&emsp;即使，仅仅为了<br><em>only if</em>       &emsp;只有<br><em>as if</em>    	&emsp;好像<br><em>disperse</em>      &emsp;分散<br><em>diffuse</em>		&emsp;扩散<br><em>whereas</em>	&emsp;鉴于，然而（同while）<br><em>sign</em>		&emsp;迹象，征兆<br><em>stimuli</em>	&emsp;刺激<br><em>expose</em>	&emsp;暴露<br><em>incompetent</em>	&emsp;无能的，不能胜任的<br><em>grievance</em>	&emsp;抱怨不平<br><em>readily</em>	&emsp;轻而易举的，乐意的<br><em>couterparts</em>   &emsp;对应的事物<br><em>characteristics</em>  &emsp;性格<br><em>tokens</em>        &emsp;代币<br><em>adjoin</em>	&emsp;相邻<br><em>toss</em>		&emsp;扔<br><em>induce</em>	&emsp;诱导，导致<br><em>resentment</em>	&emsp;怨恨<br><em>guide</em>         &emsp;支配<br><em>preserve of people alone</em>           &emsp;人所独有的<br><em>abundantly</em>    &emsp;十分明显的<br><em>righteous</em>	&emsp;义愤填膺的，正义的<br><em>contrast</em>	&emsp;比较相异的地方形成对比<br><em>comparison</em>	&emsp;比较相似的地方找共同点<br><em>jealous</em>       &emsp;嫉妒的<br><em>incline</em>		&emsp;倾斜<br><em>attentive</em>	&emsp;注意的<br><em>temperament</em>	&emsp;气质<br><em>paralysis</em>	&emsp;瘫痪<br><em>steward</em>       &emsp;管家<br><em>initiative</em>       &emsp;倡议<br><em>critic</em>        &emsp;评论家，批评者<br><em>outcome</em>      &emsp;效果，结果<br><em>suspend</em>  	 &emsp;暂停<br><em>formulate</em>       &emsp;制定<br><em>disguise</em>	&emsp;伪装<br><em>byproduct</em>	&emsp;副产品<br><em>neural</em>	        &emsp;神经<br><em>thermostat</em>	&emsp;恒温器<br><em>intensely</em>      &emsp;激烈的<br><em>harness</em>        &emsp;利用<br><em>limbic</em>         &emsp;边缘<br><em>recurring</em>	&emsp;复发<br><em>modify</em>	&emsp;修改<br><em>prefrontal</em>	&emsp;前额的<br><em>cortex</em>        &emsp;皮层<br><em>visualize</em>	&emsp;可视化<br><em>permissive</em>	 &emsp;许可的<br><em>regrettable</em>  	&emsp;惋惜<br><em>cult</em>		&emsp;流行，邪教<br><em>elevate</em>       &emsp;提高<br><em>regard</em>        &emsp;认为<br><em>capture</em>       &emsp;抓住，捕获<br><em>oral</em>		&emsp;口头的<br><em>spontaneity</em>    &emsp;即兴发挥<br><em>craft</em>         &emsp;技巧<br><em>chunk</em>         &emsp;块<br><em>elaborate</em>	&emsp;精巧的<br><em>grief</em>		&emsp;悲伤<br><em>but all too</em>	&emsp;非常（同very）<br><em>controversy</em>   &emsp;争议<br><em>counter-culture</em>&emsp;反文化<br><em>denote</em>	 &emsp;表示<br><em>liveliness</em>  	&emsp;活力<br><em>informality</em>	&emsp;非正式<br><em>comtempt</em>       &emsp;蔑视<br><em>functional</em>     &emsp;有用的，功能<br><em>artistic</em>       &emsp;优美的，艺术的<br><em>humble</em>       &emsp;卑微的</p>
-<h1 id="06年英一词汇记录"><a href="#06年英一词汇记录" class="headerlink" title="06年英一词汇记录"></a>06年英一词汇记录</h1><p><em>bulk</em>		&emsp;散装<br><em>retain</em>		&emsp;保持<br><em>indeed</em>	&emsp;事实上，的确<br><em>now that</em>  	&emsp;既然<br><em>assist</em>	&emsp;援助<br><em>sustain</em>	&emsp;维持<br><em>hence</em>		&emsp;因此<br><em>lodge</em>		&emsp;小屋<br><em>dwelling</em>       &emsp;住宅<br><em>stroll</em>    	&emsp;漫步<br><em>while</em>          &emsp;虽然，但是<br><em>comprehensive</em>	&emsp;全面的<br><em>as</em>		&emsp;正如<br><em>coordination</em>	&emsp;协调<br><em>turn around one‘s life</em>	&emsp;改变自己的生活<br><em>comtemplative</em>	&emsp;沉思性<br><em>complementary</em>	&emsp;互补的<br><em>democratizing</em>	&emsp;民主化<br><em>deference</em>	&emsp;尊重、尊敬<br><em>absorb into</em>   &emsp;沉浸在<br><em>department store</em>  &emsp;百货商店<br><em>instead of</em>     &emsp;并不是<br><em>intimate</em>	&emsp;舒适的，亲密的<br><em>democratic act</em>	&emsp;大众化行为<br><em>index</em>		&emsp;指标<br><em>indices</em>	&emsp;指标<br><em>divisive</em>        &emsp;分裂<br><em>pockets of seething anger</em>           &emsp;骚乱地区<br><em>turbulent</em>    &emsp;湍流，动荡<br><em>deteriorate</em>	&emsp;恶化<br><em>monopolize</em>	&emsp;垄断<br><em>emergence</em>	&emsp;出现<br><em>constitute</em>    &emsp;产生、构成<br><em>superb</em>	&emsp;高超的<br><em>worthy</em>	&emsp;可敬的<br><em>beard</em>		&emsp;胡须<br><em>sandals</em>	&emsp;便鞋<br><em>rocket</em>        &emsp;飙升<br><em>clientele</em>     &emsp;客户<br><em>dedicate</em>        &emsp;嫩<br><em>bun</em>          &emsp;包子<br><em>subsidy</em>  	 &emsp;补贴<br><em>vessel</em>         &emsp;容器，大船<br><em>sonar</em>		&emsp;声呐<br><em>saturate</em>	&emsp;使饱和<br><em>marine</em>	 &emsp;海的<br><em>sustainable</em>	&emsp;可维持的，养的起的<br><em>crop from</em>      &emsp;收获<br><em>reduce by</em>     &emsp;降低了……减少了……<br><em>reduce to</em>     &emsp;降低到……减少到……<br><em>outlive</em>		&emsp;比<br><em>phony</em>		&emsp;虚伪的，骗人的<br><em>perpetual</em>	&emsp;永恒的<br><em>ideology</em>        &emsp;意识形态<br><em>misery</em>		&emsp;痛苦<br><em>worshipper</em>	 &emsp;崇拜者，拜神者<br><em>worm</em>  	&emsp;蠕虫<br><em>lure</em>		&emsp;引诱</p>
-<h1 id="07年英一词汇记录"><a href="#07年英一词汇记录" class="headerlink" title="07年英一词汇记录"></a>07年英一词汇记录</h1><h1 id="08年英一词汇记录"><a href="#08年英一词汇记录" class="headerlink" title="08年英一词汇记录"></a>08年英一词汇记录</h1><p><em>category</em>		&emsp;类别，种类<br><em>veteran</em>		&emsp;老兵，经验丰富的人<br><em>hormone</em>		&emsp;激素，荷尔蒙<br><em>reproductive</em>  	&emsp;生殖的，繁殖的<br><em>capacity</em>	&emsp;领悟能力，容积<br><em>durable</em>	&emsp;耐久的，耐用的，持久的<br><em>wear-and-tear</em>		&emsp;磨损<br><em>be susceptible to</em>		&emsp;易受……影响，对……敏感<br><em>anxiety disorder</em>        &emsp;焦虑症<br><em>be vulnerable to</em>    	&emsp;易受……伤害<br><em>chronic</em>          	&emsp;长期的，慢性的<br><em>domestic</em>		&emsp;家庭的，国内的<br><em>straightforward</em>		&emsp;简单的，坦诚的<br><em>affiliation</em>			&emsp;隶属，从属<br><em>commercial</em>	&emsp;盈利的，以获利为目的的<br><em>far-reaching</em>	&emsp;影响深远的；广泛的<br><em>endeavor</em>		&emsp;努力，尝试<br><em>association</em>	&emsp;协会，联盟<br><em>so-called</em>		&emsp;所谓的<br><em>site-licensing</em>     &emsp;网站许可<br><em>peer-review</em>  &emsp;同行评审<br><em>render</em>     &emsp;使成为，被要求，使变得……，处于……状态<br><em>archive</em>		&emsp;档案<br><em>rest with sb.</em>	&emsp;属于某人<br><em>specialize in</em>	&emsp;专攻，专门研究<br><em>copyright</em>	&emsp;版权<br><em>dramatically</em>        &emsp;明显地，剧烈地，戏剧性的<br><em>frame</em>       &emsp;体形，身材<br><em>obscure</em>    &emsp;使模糊<br><em>notably</em>	&emsp;尤其，极大程度上<br><em>protein</em>	&emsp;蛋白质<br><em>secular</em>	&emsp;世俗的，长期的<br><em>genetically</em>    &emsp;遗传地<br><em>architecture</em>	&emsp;建筑学<br><em>reconsider</em>	&emsp;重新考虑，重新定义<br><em>withstand</em>		&emsp;顶住，经受住<br><em>alter</em>		&emsp;改变，更改<br><em>military</em>        &emsp;军队的<br><em>by and large</em>     &emsp;总的说来，大体上说<br><em>toothless</em>        &emsp;没有牙齿的<br><em>jaw</em>          &emsp;下巴<br><em>spur</em>  	 &emsp;激励，鼓舞，马刺<br><em>examine</em>         &emsp;调查，审查，检查<br><em>bedrock</em>		&emsp;牢固基础，基本原则<br><em>congressional</em>	&emsp;美国国会的，立法机构的<br><em>formula</em>	 &emsp;方案，公式，配方，药方，惯用语<br><em>the Electoral College</em>	&emsp;选举人团<br><em>dental</em>      &emsp;牙齿的，牙科的<br><em>prestige</em>     &emsp;声望，威信<br><em>legislative</em>     &emsp;立法的，制定法律的<br><em>legislate</em>		&emsp;立法<br><em>legislature</em>		&emsp;立法机关<br><em>legislation</em>	&emsp;法律<br><em>savings account</em>        &emsp;金融储蓄账户<br><em>regard A as B</em>		&emsp;把A看作B<br><em>part with</em>	 &emsp;放弃，交出（不舍得的东西）<br><em>from the bottom up</em>  	&emsp;自下而上</p>
-<h1 id="09年英一词汇记录"><a href="#09年英一词汇记录" class="headerlink" title="09年英一词汇记录"></a>09年英一词汇记录</h1><p><em>unreflect</em>		&emsp;不思考<br><em>reflect on&#x2F;upon</em>		&emsp;深思<br><em>reflect</em>		&emsp;反映，思考<br><em>herd</em>  	&emsp;一群人<br><em>bypass</em>	&emsp;绕过<br><em>regulate</em>	&emsp;管理<br><em>guide</em>		&emsp;引导<br><em>track</em>		&emsp;跟踪<br><em>series</em>        &emsp;系列<br><em>characteristic</em>    	&emsp;特征<br><em>part with</em>          	&emsp;放弃<br><em>precision</em>		&emsp;精确<br><em>prescription</em>		&emsp;处方<br><em>rage</em>			&emsp;风靡一时，流行；盛怒<br><em>used to do</em>	&emsp;过去常常做（现在不做）<br><em>pass down</em>	&emsp;传递<br><em>lump</em>		&emsp;把……归并一起<br><em>systematically</em>	&emsp;系统地、有条理地<br><em>trace</em>		&emsp;追溯<br><em>excessive</em>     &emsp;过分的<br><em>be subject to</em>  &emsp;受……支配、常遭受……<br><em>accurate</em>     &emsp;精确<br><em>exact</em>		&emsp;精确<br><em>exceed</em>	&emsp;超过<br><em>conventional</em>	&emsp;常规的<br><em>substantially</em>	&emsp;非常，大大地<br><em>deride</em>        &emsp;嘲笑、愚弄<br><em>in turn</em>       &emsp;继而，相应地，依次<br><em>result from</em>    &emsp;……的原因、归咎于……<br><em>owe A to B</em>	&emsp;因为B所以A<br><em>priority</em>	&emsp;优先于<br><em>prior to</em>	&emsp;在……之前<br><em>constraint</em>    &emsp;约束<br><em>in keeping with</em>	&emsp;与……保持一致<br><em>attach importance to</em>	&emsp;重视，着重于……<br><em>couterpart</em>		&emsp;职位相当的人，对应的事物<br><em>constrain</em>	&emsp;限制、约束<br><em>curb</em>        &emsp;限制、约束<br><em>recession</em>     &emsp;经济衰退，经济萎缩<br><em>rate</em>        &emsp;估计<br><em>pay little attention to</em>          &emsp;不注重……<br><em>consider……as……</em>  	 &emsp;把……看做……<br><em>comparatively</em>         &emsp;相对地、比较上<br><em>mock</em>		&emsp;嘲笑，不尊重<br><em>prospect</em>	&emsp;前景，可能性<br><em>be obsessed with</em>	 &emsp;痴迷于<br><em>be engaged in</em>	&emsp;从事于、参与、忙于<br><em>let alone</em>      &emsp;更不必说<br><em>civility</em>     &emsp;礼貌、客气、彬彬有礼<br><em>earnestness</em>     &emsp;认真，诚挚<br><em>craftsman</em>		&emsp;工匠，手艺人<br><em>intellectualize</em>		&emsp;使智能化<br><em>minister</em>	&emsp;牧师<br><em>unfold</em>        &emsp;逐渐展开、打开<br><em>philosophy</em>		&emsp;哲学，生活的信条<br><em>preoccupation</em>	 &emsp;全神关注<br><em>extensively</em>  	&emsp;广阔地，广泛地</p>
 ]]></content>
   </entry>
 </search>
